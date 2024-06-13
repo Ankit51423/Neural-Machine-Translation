@@ -9,6 +9,8 @@ Introduction
 http://www.manythings.org/anki/, where you may nd tab delimited bilingual sentence pairs in
  different les based on the source and target language of your choice.
  5. For this project, you need to use French - English language pairs just to evaluate the projects uniformly for all students.
+
+    
  Step-1: Download and clean the data
  1. Download the data as zip le and extract it to corresponding txt le. Read this txt le and prepare the list of pairs of
  language phrases.
@@ -16,6 +18,8 @@ http://www.manythings.org/anki/, where you may nd tab delimited bilingual senten
  Remove the non printable charaters, if any
  Remove punctuations and non-alphabetic charaters
  Convert to lowercase
+
+
  Step-2: Split and prepare the data for training the model
  1. After cleaning the data, next you need to split the data in train and test.
  2. Then, you need to create separate tokenizer for both source language and target language.
@@ -23,6 +27,8 @@ http://www.manythings.org/anki/, where you may nd tab delimited bilingual senten
  sequences w.r.t. their individual tokenizers and maximum sequence lengths.
  4. Here, in this problem you will essentially be predicting the words in target language, therefore output seuences will need
  to be converted in one hot encoding.
+
+
  Step-3: De ne and train the RNN based Encoder-Decoder model
  1. First, you need to de ne the sequential model consisting mainly of two parts Encoder and Decoder
  2. In Encoder, the input sequence shall be passed through an Embedding layer (to train the word embeddings for source
@@ -33,6 +39,8 @@ http://www.manythings.org/anki/, where you may nd tab delimited bilingual senten
  Dense layer to get output separately by timesteps.
  5. Now, you have de ned the model and now this can be trained on the training data, you prepared in last step. Here, you
  may play with the number of epochs, optimizer, batch size to get the optimum results.
+
+
  Step-4: Evaluating the model
 Use BLEU score for evaluating your model using NLTK library
  For .ipynb notebook of this le, right click following link and choose 'save link as'
